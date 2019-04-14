@@ -1,8 +1,8 @@
 <h1>Welcome! Click on the buttons below to find out more information about dog breeds.</h1>
 
-<button onclick = "location.href='localhost:5000/numbers'" type="button">Numbers</button>
-<button onclick = "location.href='localhost:5000/funfacts'" type="button">Facts</button>
-<button onclick = "location.href='localhost:5000/breedinfo'" type="button">Breeds</button>
+<button type = "button"><a href="{{ url_for('facts')}}">Facts</a></button>
+<button type = "button"><a href="{{ url_for('numbers')}}">Numbers</a></button>
+<button type = "button"><a href="{{ url_for('breeds')}}">Breeds</a></button>
 
 <script>
   function changeBackground(color) {
