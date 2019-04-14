@@ -1,0 +1,24 @@
+<style>
+  li {
+    font-size: 20px;
+  }
+</style>
+
+<ul>
+{% for nm in dog_names %}
+<li>{{ nm }}</li><br>
+{% endfor %}
+</ul>
+
+
+<script>
+  function changeBackground(color) {
+    document.body.style.background = color;
+  }
+  window.addEventListener("load",function() { changeBackground('#fddbff'); });
+
+  function changeFont(fcolor) {
+    document.body.style.color = fcolor;
+  }
+  window.addEventListener("load", function() {changeFont('#e835e2'); });
+</script>

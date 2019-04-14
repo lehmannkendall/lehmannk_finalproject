@@ -1,0 +1,17 @@
+<h1>Welcome! Click on the buttons below to find out more information about dog breeds.</h1>
+
+<button onclick = "location.href='localhost:5000/numbers'" type="button">Numbers</button>
+<button onclick = "location.href='localhost:5000/funfacts'" type="button">Facts</button>
+<button onclick = "location.href='localhost:5000/breedinfo'" type="button">Breeds</button>
+
+<script>
+  function changeBackground(color) {
+    document.body.style.background = color;
+  }
+  window.addEventListener("load",function() { changeBackground('#c8f4b0'); });
+
+  function changeFont(fcolor) {
+    document.body.style.color = fcolor;
+  }
+  window.addEventListener("load", function() {changeFont('#56a82a'); });
+</script>

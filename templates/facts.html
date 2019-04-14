@@ -1,0 +1,23 @@
+<style>
+  li {
+    font-size: 20px;
+  }
+</style>
+
+<ul>
+{% for nm in facts %}
+<li>{{ nm }}</li><br>
+{% endfor %}
+</ul>
+
+<script>
+  function changeBackground(color) {
+    document.body.style.background = color;
+  }
+  window.addEventListener("load",function() { changeBackground('#e7c6ff'); });
+
+  function changeFont(fcolor) {
+    document.body.style.color = fcolor;
+  }
+  window.addEventListener("load", function() {changeFont('#8d07ed'); });
+</script>

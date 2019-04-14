@@ -1,0 +1,15 @@
+<div class="page-header">
+    <h1>{% if num_breeds %}{{ num_breeds }}{% else %}0{% endif %} breed information avilable.</h1>
+</div>
+
+<script>
+  function changeBackground(color) {
+    document.body.style.background = color;
+  }
+  window.addEventListener("load",function() { changeBackground('#a6e3f4'); });
+
+  function changeFont(fcolor) {
+    document.body.style.color = fcolor;
+  }
+  window.addEventListener("load", function() {changeFont('#2407ff'); });
+</script>
