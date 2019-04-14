@@ -5,7 +5,6 @@ import csv
 from advanced_expiry_caching import Cache
 from flask import Flask, render_template, session, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
-from itertools import permutations, product
 import random
 import re, clr
 
@@ -56,16 +55,23 @@ for item in cache_diction:
         names_list.append(new_x[0])
         # names_list.append(x)
     # print(names_list)
-    #maybe remove information after |
 
     info = soup.find("div", {"class": "pw-main-content-text"})
-    list_p = info.findChildren("p")
+    list_p = []
+    p = info.findChild("p")
+    list_p.append(p)
     for item in list_p:
-        y = item.text
+        y = item
         if not y:
             description_list.append("na")
         else:
-            description_list.append(y)
+            description_list.append(y.text)
+    # print(description_list)
+    #     y = item.text
+    #     if not y:
+    #         description_list.append("na")
+    #     else:
+    #         description_list.append(y)
     # print(description_list)
 
     fact1 = soup.find("p", {"id": "htmlbody_3_centercontent_7_rptRelated_description_0"})
@@ -110,6 +116,7 @@ with open("dogs_info.csv", 'r', encoding='utf-8') as parkcsv:
     for data_info in reader:
         data.append(data_info)
     parkcsv.close()
+
 
 app = Flask(__name__)
 app.debug = True
@@ -162,42 +169,36 @@ for row in data[1:]:
     session.add(table2)
     session.commit()
 
-@app.route('/home')
-def welcome():
-    return render_template('home.html')
-
-@app.route('/numbers')
-def number():
-    breeds = Breed.query.all()
-    num_breeds = len(breeds)
-    return render_template('numbers.html', num_breeds=num_breeds)
-
-@app.route('/breedinfo')
-def breed():
-    one_breed = []
-    breeds = Breed.query.all()
-    random.shuffle(breeds)
-    for dog in breeds[:3]:
-        newtup = (dog.name, dog.overview)
-        one_breed.append(newtup)
-    return render_template('breeds.html', dog_names=one_breed)
-    # one_breed = []
-    # breeds = list(Breed.query.all())
-    # random.shuffle(breeds)
-    # for item in breeds[:3]:
-    #     x = one_breed.append(item.name)
-    # return render_template('breeds.html', dog_names=one_breed)
-
-@app.route('/funfacts')
-def facts():
-    facts_fun = []
-    facts_all = Fact.query.all()
-    random.shuffle(facts_all)
-    for fact in facts_all[:3]:
-        newtup = (fact.name, fact.fun_fact_1, fact.fun_fact_2, fact.fun_fact_3)
-        facts_fun.append(newtup)
-    return render_template('facts.html', facts=facts_fun)
-
-
-if __name__ == "__main__":
-    app.run()
+# @app.route('/home')
+# def home():
+#     return render_template('home.html')
+#
+# @app.route('/numbers')
+# def numbers():
+#     breeds = Breed.query.all()
+#     num_breeds = len(breeds)
+#     return render_template('numbers.html', num_breeds=num_breeds)
+#
+# @app.route('/breedinfo')
+# def breeds():
+#     one_breed = []
+#     breeds = Breed.query.all()
+#     random.shuffle(breeds)
+#     for dog in breeds[:3]:
+#         newtup = (dog.name, dog.overview)
+#         one_breed.append(newtup)
+#     return render_template('breeds.html', dog_names=one_breed)
+#
+# @app.route('/funfacts')
+# def facts():
+#     facts_fun = []
+#     facts_all = Fact.query.all()
+#     random.shuffle(facts_all)
+#     for fact in facts_all[:3]:
+#         newtup = (fact.name, fact.fun_fact_1, fact.fun_fact_2, fact.fun_fact_3)
+#         facts_fun.append(newtup)
+#     return render_template('facts.html', facts=facts_fun)
+#
+#
+# if __name__ == "__main__":
+#     app.run()
