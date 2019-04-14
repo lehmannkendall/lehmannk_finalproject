@@ -1,12 +1,27 @@
 <style>
   li {
-    font-size: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    text-decoration: underline;
   }
+
+  p {
+    font-size: 18px;
+  }
+
+  h2 {
+    font-weight: normal;
+    font-size: 22px;
+  }
+
 </style>
 
 <ul>
 {% for nm in facts %}
-<li>{{ nm }}</li><br>
+<li>{{ nm[0] }} </li>
+  <h2>Fun Fact 1:</h2><p>{%if nm[1] == 1 %} {{ nm[1]}} {% else %} {{ nm[1] }} {% endif %} </p>
+  <h2>Fun Fact 2:</h2><p>{%if nm[2] == 2 %} {{ nm[2]}} {% else %} {{ nm[2] }} {% endif %} </p>
+  <h2>Fun Fact 3:</h2><p>{%if nm[3] == 3 %} {{ nm[3]}} {% else %} {{ nm[3] }} {% endif %} </p><br>
 {% endfor %}
 </ul>
 

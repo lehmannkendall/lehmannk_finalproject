@@ -1,12 +1,21 @@
 <style>
   li {
-    font-size: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    text-decoration: underline;
   }
+
+  p {
+    font-size: 22px;
+  }
+
 </style>
 
 <ul>
 {% for nm in dog_names %}
-<li>{{ nm }}</li><br>
+<li>{{ nm[0] }}</li>
+  <p>{%if nm[1] == 1 %} {{ nm[1]}} {% else %} {{ nm[1] }} {% endif %} </p><br>
+
 {% endfor %}
 </ul>
 
