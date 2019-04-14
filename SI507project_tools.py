@@ -126,6 +126,7 @@ session = db.session
 class Fact(db.Model):
     __tablename__ = "facts"
     id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(400))
     fun_fact_1 = db.Column(db.String(3000))
     fun_fact_2 = db.Column(db.String(3000))
     fun_fact_3 = db.Column(db.String(3000))
@@ -154,27 +155,28 @@ for row in data[1:]:
     fact1 = row[2]
     fact2 = row[3]
     fact3 = row[4]
-    table1 = Fact(fun_fact_1 = fact1, fun_fact_2 = fact2, fun_fact_3 = fact3)
+    table1 = Fact(name = breed_name, fun_fact_1 = fact1, fun_fact_2 = fact2, fun_fact_3 = fact3)
     table2 = Breed(name = breed_name, overview = breed_overview)
     session.add(table1)
     session.commit()
     session.add(table2)
     session.commit()
 
-# @app.route('/home')
-# def welcome():
-#     return render_template('home.html')
-#
-# @app.route('/numbers')
-# def number():
-#     breeds = Breed.query.all()
-#     num_breeds = len(breeds)
-#     return render_template('numbers.html', num_breeds=num_breeds)
-#
+@app.route('/home')
+def welcome():
+    return render_template('home.html')
+
+@app.route('/numbers')
+def number():
+    breeds = Breed.query.all()
+    num_breeds = len(breeds)
+    return render_template('numbers.html', num_breeds=num_breeds)
+
 @app.route('/breedinfo')
 def breed():
     one_breed = []
     breeds = Breed.query.all()
+    random.shuffle(breeds)
     for dog in breeds[:3]:
         newtup = (dog.name, dog.overview)
         one_breed.append(newtup)
@@ -185,15 +187,17 @@ def breed():
     # for item in breeds[:3]:
     #     x = one_breed.append(item.name)
     # return render_template('breeds.html', dog_names=one_breed)
-# one_breed = []
-# breeds = Breed.query.all()
-# for dog in breeds[:3]:
-#     newtup = (dog.name, dog.overview)
-#     one_breed.append(newtup)
-# print(one_breed)
 
-# # @app.route('/funfacts')
-# # def facts():
-# #
+@app.route('/funfacts')
+def facts():
+    facts_fun = []
+    facts_all = Fact.query.all()
+    random.shuffle(facts_all)
+    for fact in facts_all[:3]:
+        newtup = (fact.name, fact.fun_fact_1, fact.fun_fact_2, fact.fun_fact_3)
+        facts_fun.append(newtup)
+    return render_template('facts.html', facts=facts_fun)
+
+
 if __name__ == "__main__":
     app.run()
