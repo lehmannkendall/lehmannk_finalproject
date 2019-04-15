@@ -17,7 +17,6 @@ The dog breed application provides information about a variety of dog breeds. Th
 1. First, you should install all requirements with `pip install -r requirements.txt`
 2. Second, you should download SI507project_tools.py and SI507project_tests.py and the templates folder in the same directory.
 3. Third, you should run `python SI507project_tools.py runserver` in the terminal window.
-4. Anything else
 
 ## How to use
 
@@ -57,7 +56,7 @@ NOTE: Need not have 3 steps, but should have as many as are appropriate!
 - [ ] Includes a `requirements.txt` file containing all required modules to run program
 - [ ] Includes a clear and readable README.md that follows this template
 - [ ] Includes a sample .sqlite/.db file
-- [ ] Includes a diagram of your database schema
+- [x] Includes a diagram of your database schema
 - [ ] Includes EVERY file needed in order to run the project
 - [ ] Includes screenshots and/or clear descriptions of what your project should look like when it is working
 
@@ -69,13 +68,13 @@ NOTE: Need not have 3 steps, but should have as many as are appropriate!
 - [x] Information stored in the database is viewed or interacted with in some way
 
 ### Additional Components (at least 6 required)
-- [x] Use of a new module
+- [x] Use of a new module -- does re count as a new module?
 - [ ] Use of a second new module
 - [ ] Object definitions using inheritance (indicate if this counts for 2 or 3 of the six requirements in a parenthetical)
 - [ ] A many-to-many relationship in your database structure
 - [ ] At least one form in your Flask application
 - [x] Templating in your Flask application
-- [x] Inclusion of JavaScript files in the application
+- [x] Inclusion of JavaScript files in the application -- within the html templates
 - [x] Links in the views of Flask application page/s
 - [ ] Relevant use of `itertools` and/or `collections`
 - [x] Sourcing of data using web scraping
