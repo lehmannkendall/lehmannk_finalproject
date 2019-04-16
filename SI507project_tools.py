@@ -1,16 +1,9 @@
 from bs4 import BeautifulSoup
-import requests
-import json
-import csv
+import requests, json, csv, re, random
 from advanced_expiry_caching import Cache
 from flask import Flask, render_template, session, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
-from itertools import permutations, product
-import random
-import re, clr
-import requests_cache
 from PIL import Image
-from flask_images import resized_img_src
 
 FILENAME = "dogs_cache.json"
 program_cache = Cache(FILENAME)
