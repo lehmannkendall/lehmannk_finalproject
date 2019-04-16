@@ -9,6 +9,8 @@ from itertools import permutations, product
 import random
 import re, clr
 import requests_cache
+from PIL import Image
+from flask_images import resized_img_src
 
 FILENAME = "dogs_cache.json"
 program_cache = Cache(FILENAME)
@@ -179,10 +181,14 @@ for row in data[1:]:
     session.add(table2)
     session.commit()
 
+image_file = Image.open("static/puppies.jpg")
+b_image_file = image_file.convert('1')
+b_image_file.save('static/new_puppies.jpg')
 
-@app.route('/home')
+@app.route('/home', methods=['GET', 'POST'])
 def home():
-    return render_template('home.html')
+    bw = "static/new_puppies.jpg"
+    return render_template('home.html', bw = bw)
 
 @app.route('/numbers')
 def numbers():
