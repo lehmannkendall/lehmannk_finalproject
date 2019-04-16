@@ -1,27 +1,13 @@
 from SI507project_tools import *
 from bs4 import BeautifulSoup
-import requests
-import json
-import csv
+import requests, json, csv, re, random
 from advanced_expiry_caching import Cache
 from flask import Flask, render_template, session, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
+from PIL import Image
+import unittest, os
 from sqlalchemy import create_engine
 import unittest
-import re
-import os
-
-
-#1 I want to have one to check the length of the dogs_cache.json - should be 194 items
-#4 I want to somehow test my flask routes
-
-# class PartOne(unittest.TestCase):
-#     def test_scrape_json(self):
-#         self.json_file = open('dogs_cache.json', 'r')
-#         self.row_reader = self.json_file.readlines()
-#         self.assertTrue(len(self.row_reader[0]) is 194, "Testing to see if the json file has 194 items")
-#         print(len(self.row_reader[0])
-#         self.json_file.close()
 
 class PartOne(unittest.TestCase):
     def test_scrape_json(self):
@@ -31,6 +17,10 @@ class PartOne(unittest.TestCase):
     def test_csvFileExists(self):
         exists = os.path.isfile('dogs_info.csv')
         self.assertTrue(exists, "Test to see if dogs_info.csv was created")
+
+    def test_PIL_imageExists(self):
+        exists = os.path.isfile('static/new_puppies.jpg')
+        self.assertTrue(exists, "Test to see if the PIL module was used to create jpg")
 
 class PartTwo(unittest.TestCase):
     def test_num_json(self):
