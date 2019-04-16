@@ -109,8 +109,6 @@ for item in cache_diction:
 
 rows = zip(names_list, description_list, fact1_list, fact2_list, fact3_list)
 
-
-
 with open("dogs_info.csv", 'w', newline='', encoding = "utf8") as csvfile:
     samplecsvwriter = csv.writer(csvfile, delimiter=",",quotechar='"', quoting=csv.QUOTE_ALL)
     samplecsvwriter.writerow(["Name", "Description", "Fun Fact 1", "Fun Fact 2", "Fun Fact 3"])
@@ -187,8 +185,7 @@ b_image_file.save('static/new_puppies.jpg')
 
 @app.route('/home', methods=['GET', 'POST'])
 def home():
-    bw = "static/new_puppies.jpg"
-    return render_template('home.html', bw = bw)
+    return render_template('home.html')
 
 @app.route('/numbers')
 def numbers():
