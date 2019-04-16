@@ -5,8 +5,10 @@ import csv
 from advanced_expiry_caching import Cache
 from flask import Flask, render_template, session, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
+from itertools import permutations, product
 import random
 import re, clr
+import requests_cache
 
 FILENAME = "dogs_cache.json"
 program_cache = Cache(FILENAME)
@@ -43,6 +45,10 @@ fact1_list = []
 fact2_list = []
 fact3_list = []
 
+# print(len(url_data)) #93285
+# print(len(cache_diction)) #194
+
+
 for item in cache_diction:
     # print(cache_diction[item]["item"])
     url_data = cache_diction[item]["values"]
@@ -67,12 +73,12 @@ for item in cache_diction:
         else:
             description_list.append(y.text)
     # print(description_list)
-    #     y = item.text
-    #     if not y:
-    #         description_list.append("na")
-    #     else:
-    #         description_list.append(y)
-    # print(description_list)
+
+
+#why aren't the append("na") things working for fact1,fact2,fact3? In the csv file there seem to be blank spaces instead of "na"
+  ## I didn't find any missing data to append "na" I did find records elements that began with multiple tabs "\t"; therefore
+    ## I added the replace statements to remove them.
+# Example  fact1_list.append(z.replace("\n", "").replace("\r", "").replace("\t", "").strip())
 
     fact1 = soup.find("p", {"id": "htmlbody_3_centercontent_7_rptRelated_description_0"})
     for item in fact1:
@@ -100,6 +106,8 @@ for item in cache_diction:
             fact3_list.append(item)
 
 rows = zip(names_list, description_list, fact1_list, fact2_list, fact3_list)
+
+
 
 with open("dogs_info.csv", 'w', newline='', encoding = "utf8") as csvfile:
     samplecsvwriter = csv.writer(csvfile, delimiter=",",quotechar='"', quoting=csv.QUOTE_ALL)
@@ -154,6 +162,7 @@ class Breed(db.Model):
     def __repr__(self):
         return "{} | fact_id: {}".format(self.name, self.fact_id)
 
+db.drop_all()
 db.create_all()
 session.commit()
 
@@ -164,9 +173,9 @@ for row in data[1:]:
     fact2 = row[3]
     fact3 = row[4]
     table1 = Fact(name = breed_name, fun_fact_1 = fact1, fun_fact_2 = fact2, fun_fact_3 = fact3)
-    table2 = Breed(name = breed_name, overview = breed_overview)
     session.add(table1)
     session.commit()
+    table2 = Breed(name = breed_name, overview = breed_overview, fact_id = table1.id)
     session.add(table2)
     session.commit()
 

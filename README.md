@@ -68,7 +68,7 @@ NOTE: Need not have 3 steps, but should have as many as are appropriate!
 - [x] Information stored in the database is viewed or interacted with in some way
 
 ### Additional Components (at least 6 required)
-- [x] Use of a new module -- does re count as a new module?
+- [ ] Use of a new module
 - [ ] Use of a second new module
 - [ ] Object definitions using inheritance (indicate if this counts for 2 or 3 of the six requirements in a parenthetical)
 - [ ] A many-to-many relationship in your database structure
