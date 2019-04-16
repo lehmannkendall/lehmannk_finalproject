@@ -34,6 +34,7 @@
   	font-weight:bold;
   	padding:6px 24px;
   	text-shadow:0px 1px 0px #ffffff;
+    display: block;
   }
   .myButton:hover {
   	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #dfdfdf), color-stop(1, #ededed));
@@ -51,9 +52,19 @@
     text-decoration: none;
   }
 
+  img {
+    width: 300px;
+    height: 200px;
+    display: inline-block;
+  }
+
 </style>
 
 <button type = "button" class = "myButton"><a href="{{ url_for('home')}}">Return to Home</a></button>
+
+<img src = "{{url_for('static', filename='puppy.jpg')}}">
+<img src = "{{url_for('static', filename='new_puppies.jpg')}}">
+<img src = "{{url_for('static', filename='dog.jpg')}}">
 
 <ul>
 {% for nm in dog_names %}
