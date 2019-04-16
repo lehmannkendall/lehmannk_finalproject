@@ -32,9 +32,12 @@ class PartOne(unittest.TestCase):
         exists = os.path.isfile('dogs_info.csv')
         self.assertTrue(exists)
 
-# class PartTwo(unittest.TestCase):
-#     def test_num_json(self):
-#         pass
+class PartTwo(unittest.TestCase):
+    def test_num_json(self):
+        json_file = open('dogs_cache.json', 'r', encoding = 'utf-8')
+        row_reader = json_file.readline()
+        json_file.close()
+        self.assertTrue(len(row_reader), 194) 
 
 class PartThree(unittest.TestCase):
 
