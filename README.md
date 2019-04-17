@@ -6,7 +6,7 @@ Link to this repository: https://github.com/lehmannkendall/lehmannk_finalproject
 
 By: Kendall Lehmann (lehmannk)
 
-**I think I am mostly done with the project, but will continue to work on/review** 
+**I think I am mostly done with the project, but will continue to work on/review**
 
 ---
 
@@ -41,7 +41,7 @@ The dog breed application provides information about a variety of dog breeds. Th
 
 ## Routes in this application
 - `/home` -> this is the home page that provides button links to the other pages
-- '/numbers' -> this is a page that displays how many types of breeds are represented in the dataset
+- `/numbers` -> this is a page that displays how many types of breeds are represented in the dataset
 - `/breedinfo` -> this route displays one random breed name and a description of the breed
 - `/funfacts` -> this route displays two random breeds and three fun facts that go along with each breed
 
