@@ -28,7 +28,7 @@ class PartTwo(unittest.TestCase):
         cache_contents = json_file.read()
         cache_diction = json.loads(cache_contents)
         json_file.close()
-        self.assertTrue(len(cache_diction) is 194, "Test to see if dogs_cache.json has 194 items / URLs from web scrapping")
+        self.assertEqual(len(cache_diction), 194, "Test to see if dogs_cache.json has 194 items / URLs from web scrapping")
 
 class PartThree(unittest.TestCase):
 
@@ -37,15 +37,6 @@ class PartThree(unittest.TestCase):
         row_reader = csv_file.readline()
         csv_file.close()
         self.assertEqual(row_reader, '"Name","Description","Fun Fact 1","Fun Fact 2","Fun Fact 3"\n', "Test to see if the headers are correct in the csv")
-    # def test_csv(self):
-    #     self.csv_file = open('dogs_info.csv', 'r')
-    #     self.row_reader = self.csv_file.readlines()
-    #     self.assertTrue("Name" in self.row_reader[0].split(",")[0], "Testing that Name is the first header in the csv")
-    #     self.assertTrue("Description" in self.row_reader[0].split(",")[1], "Testing that Description is the second header in the csv")
-    #     self.assertTrue("Fun Fact 1" in self.row_reader[0].split(",")[2], "Testing that Fun Fact 1 is the third header in the csv")
-    #     self.assertTrue("Fun Fact 2" in self.row_reader[0].split(",")[3], "Testing that Fun Fact 2 is the fourth header in the csv")
-    #     self.assertTrue("Fun Fact 3" in self.row_reader[0].split(",")[4], "Testing that Fun Fact 3 is the fifth header in the csv")
-    #     self.csv_file.close()
 
 class PartFour(unittest.TestCase):
     @classmethod
