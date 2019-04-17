@@ -37,7 +37,7 @@ The dog breed application provides information about a variety of dog breeds. Th
 
 4. In Google Chrome (or other browser) type in: localhost:5000/funfacts in the URL for fun facts related to two breeds OR click on the 'facts' button. (needed to zoom out for the screenshot so it all fit on one page)
 
-![example of fact page](screenshots/facts.png)
+![example of facts page](screenshots/facts.png)
 
 ## Routes in this application
 - `/home` -> this is the home page that provides button links to the other pages
@@ -106,5 +106,5 @@ The dog breed application provides information about a variety of dog breeds. Th
 - [x] Caching of data you continually retrieve from the internet in some way
 
 ### Submission
-- [ ] I included a link to my GitHub repository with the correct permissions on Canvas! (Did you though? Did you actually? Are you sure you didn't forget?)
+- [ ] I included a link to my GitHub repository with the correct permissions on Canvas!
 - [ ] I included a summary of my project and how I thought it went **in my Canvas submission**!
