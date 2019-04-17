@@ -6,6 +6,8 @@ Link to this repository: https://github.com/lehmannkendall/lehmannk_finalproject
 
 By: Kendall Lehmann (lehmannk)
 
+**I think I am mostly done with the project, but will continue to work on/review** 
+
 ---
 
 ## Project Description
