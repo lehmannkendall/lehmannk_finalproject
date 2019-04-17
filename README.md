@@ -23,7 +23,7 @@ The dog breed application provides information about a variety of dog breeds. Th
 
 1. In Google Chrome (or other browser) type in: localhost:5000/home in the URL for the homepage.
 
-![example of home page](home.png)
+![example of home page](screenshots/home.png)
 
 2. In Google Chrome (or other browser) type in: localhost:5000/numbers in the URL for the numbers page OR click on the 'numbers' button.
 3. In Google Chrome (or other browser) type in: localhost:5000/breedinfo in the URL for the breed information page OR click on the 'breeds' button.
