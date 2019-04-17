@@ -69,36 +69,33 @@ for item in cache_diction:
             description_list.append(y.text)
     # print(description_list)
 
-
-#why aren't the append("na") things working for fact1,fact2,fact3? In the csv file there seem to be blank spaces instead of "na"
-  ## I didn't find any missing data to append "na" I did find records elements that began with multiple tabs "\t"; therefore
-    ## I added the replace statements to remove them.
-# Example  fact1_list.append(z.replace("\n", "").replace("\r", "").replace("\t", "").strip())
-
     fact1 = soup.find("p", {"id": "htmlbody_3_centercontent_7_rptRelated_description_0"})
     for item in fact1:
         z = item
         # print(item)
-        if not z:
-            fact1_list.append("na")
-        else:
-            fact1_list.append(item)
+        fact1_list.append(z.replace("\n", "").replace("\r", "").replace("\t", "").strip())
+        # if not z:
+        #     fact1_list.append("na")
+        # else:
+        #     fact1_list.append(item)
 
     fact2 = soup.find("p", {"id": "htmlbody_3_centercontent_7_rptRelated_description_1"})
     for item in fact2:
         k = item
-        if not k:
-            fact2_list.append("na")
-        else:
-            fact2_list.append(item)
+        fact2_list.append(k.replace("\n", "").replace("\r", "").replace("\t", "").strip())
+        # if not k:
+        #     fact2_list.append("na")
+        # else:
+        #     fact2_list.append(item)
 
     fact3 = soup.find("p", {"id": "htmlbody_3_centercontent_7_rptRelated_description_2"})
     for item in fact3:
         h = item
-        if not h:
-            fact3_list.append("na")
-        else:
-            fact3_list.append(item)
+        fact3_list.append(h.replace("\n", "").replace("\r", "").replace("\t", "").strip())
+        # if not h:
+        #     fact3_list.append("na")
+        # else:
+        #     fact3_list.append(item)
 
 rows = zip(names_list, description_list, fact1_list, fact2_list, fact3_list)
 
