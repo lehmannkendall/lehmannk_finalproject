@@ -33,9 +33,9 @@ The dog breed application provides information about a variety of dog breeds. Th
 
 ![example of breeds page](screenshots/breeds.png)
 
-4. In Google Chrome (or other browser) type in: localhost:5000/funfacts in the URL for fun facts related to two breeds OR click on the 'facts' button.
+4. In Google Chrome (or other browser) type in: localhost:5000/funfacts in the URL for fun facts related to two breeds OR click on the 'facts' button. (needed to zoom out for the screenshot so it all fit on one page)
 
-![example of home page](screenshots/facts.png)
+![example of fact page](screenshots/facts.png)
 
 ## Routes in this application
 - `/home` -> this is the home page that provides button links to the other pages
@@ -44,10 +44,8 @@ The dog breed application provides information about a variety of dog breeds. Th
 - `/funfacts` -> this route displays two random breeds and three fun facts that go along with each breed
 
 ## How to run tests
-1. First... (e.g. access a certain directory if necessary)
-2. Second (e.g. any other setup necessary)
-3. etc (e.g. run the specific test file)
-NOTE: Need not have 3 steps, but should have as many as are appropriate!
+1. First access the directory that you placed all the necessary files in (from 'how to run' section of readme)
+2. As mentioned in step 4 of 'how to use' section of readme, in order to test the code from SI507project_tools.py, run `python SI507project_tests.py` in the terminal window.
 
 ## In this repository:
 - Main Files
@@ -74,14 +72,14 @@ NOTE: Need not have 3 steps, but should have as many as are appropriate!
 
 ### General
 - [x] Project is submitted as a Github repository
-- [ ] Project includes a working Flask application that runs locally on a computer
-- [ ] Project includes at least 1 test suite file with reasonable tests in it.
+- [x] Project includes a working Flask application that runs locally on a computer
+- [x] Project includes at least 1 test suite file with reasonable tests in it.
 - [ ] Includes a `requirements.txt` file containing all required modules to run program
-- [ ] Includes a clear and readable README.md that follows this template
-- [ ] Includes a sample .sqlite/.db file
+- [x] Includes a clear and readable README.md that follows this template
+- [x] Includes a sample .sqlite/.db file
 - [x] Includes a diagram of your database schema
-- [ ] Includes EVERY file needed in order to run the project
-- [ ] Includes screenshots and/or clear descriptions of what your project should look like when it is working
+- [x] Includes EVERY file needed in order to run the project
+- [x] Includes screenshots and/or clear descriptions of what your project should look like when it is working
 
 ### Flask Application
 - [x] Includes at least 3 different routes
