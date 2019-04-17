@@ -10,20 +10,24 @@ By: Kendall Lehmann (lehmannk)
 
 ## Project Description
 
-The dog breed application provides information about a variety of dog breeds. The project scrapes data from https://www.petwave.com/Dogs/Breeds.aspx. This data is then put into a CSV and then put into two tables (Breed and Facts) in a database. In the Breed table there is information about the breed name and a description/overview of the breed. In the Fact table there is information about the breed name, fun fact 1, fun fact 2, and fun fact 3. There are 4 flask routes in the dog breed application. The first route is a homepage that welcomes users and provides button links to other pages. The second route is information about the numbers of breeds available. The third route is information about the dog breed name and that dog breed's overview. The fourth route is information about the dog breed name and that dog breed's fun fact 1, fun fact 2, and fun fact 3.
+The dog breed application provides information about a variety of dog breeds. The project scrapes data from https://www.petwave.com/Dogs/Breeds.aspx. This data is then put into a CSV and then put into two tables (Breed and Facts) in a database. In the Breed table there is information about the breed name and a description/overview of the breed (and the fact_id). In the Fact table there is information about the breed name, fun fact 1, fun fact 2, and fun fact 3. There are 4 flask routes in the dog breed application. The first route is a homepage that welcomes users and provides button links to other pages. The second route is information about the numbers of breeds available. The third route is information about the dog breed name and that dog breed's overview. The fourth route is information about the dog breed name and that dog breed's fun fact 1, fun fact 2, and fun fact 3.
 
 ## How to run
 
 1. First, you should install all requirements with `pip install -r requirements.txt`
-2. Second, you should download SI507project_tools.py and SI507project_tests.py and the templates folder in the same directory.
-3. Third, you should run `python SI507project_tools.py runserver` in the terminal window.
+2. Second, you should download SI507project_tools.py and SI507project_tests.py and the templates folder and the static folder and the advanced_expiry_caching.py file in the same directory.
+3. Third, you should run `python SI507project_tools.py runserver` in the terminal window to run the application.
+4. Fourth, to test the code from SI507project_tools.py, run `python SI507project_tests.py` in the terminal window.
 
 ## How to use
 
 1. In Google Chrome (or other browser) type in: localhost:5000/home in the URL for the homepage.
-2. In Google Chrome (or other browser) type in: localhost:5000/numbers in the URL for the numbers page.
-3. In Google Chrome (or other browser) type in: localhost:5000/breedinfo in the URL for the breed information page.
-4. In Google Chrome (or other browser) type in: localhost:5000/funfacts in the URL for fun facts related to two breeds.
+
+![example of home page](home.png)
+
+2. In Google Chrome (or other browser) type in: localhost:5000/numbers in the URL for the numbers page OR click on the 'numbers' button.
+3. In Google Chrome (or other browser) type in: localhost:5000/breedinfo in the URL for the breed information page OR click on the 'breeds' button.
+4. In Google Chrome (or other browser) type in: localhost:5000/funfacts in the URL for fun facts related to two breeds OR click on the 'facts' button.
 
 (Optional): Markdown syntax to include an screenshot/image: ![alt text](image.jpg)
 
@@ -40,11 +44,24 @@ The dog breed application provides information about a variety of dog breeds. Th
 NOTE: Need not have 3 steps, but should have as many as are appropriate!
 
 ## In this repository:
-- Directory Name
-  - File in directory
-  - File in directory
-- File name
-- File name
+- Main Files
+  - SI507project_tools.py
+  - SI507project_tests.py
+  - advanced_expiry_caching.py
+  - README.md
+  - requirements.txt
+  - templates folder (with breeds.html, numbers.html, facts.html, home.html)
+  - stataic folder (with dog.jpg, puppies.jpg, puppy.jpg)
+
+- Example Files (can be removed because code in SI507project_tools.py should generate all of these files)
+  - dogs_cache.json
+  - dogs.db
+  - dogs_info.csv
+  - new_puppies.jpg (within static folder)
+
+- Diagrams
+  - SI507_final_database_plan.jpg
+  - screenshots folder (images to show how app should look)
 
 ---
 ## Code Requirements for Grading
@@ -68,7 +85,7 @@ NOTE: Need not have 3 steps, but should have as many as are appropriate!
 - [x] Information stored in the database is viewed or interacted with in some way
 
 ### Additional Components (at least 6 required)
-- [x] Use of a new module - PIL 
+- [x] Use of a new module - PIL
 - [ ] Use of a second new module
 - [ ] Object definitions using inheritance (indicate if this counts for 2 or 3 of the six requirements in a parenthetical)
 - [ ] A many-to-many relationship in your database structure
