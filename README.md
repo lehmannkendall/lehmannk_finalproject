@@ -26,10 +26,16 @@ The dog breed application provides information about a variety of dog breeds. Th
 ![example of home page](screenshots/home.png)
 
 2. In Google Chrome (or other browser) type in: localhost:5000/numbers in the URL for the numbers page OR click on the 'numbers' button.
+
+![example of numbers page](screenshots/numbers.png)
+
 3. In Google Chrome (or other browser) type in: localhost:5000/breedinfo in the URL for the breed information page OR click on the 'breeds' button.
+
+![example of breeds page](screenshots/breeds.png)
+
 4. In Google Chrome (or other browser) type in: localhost:5000/funfacts in the URL for fun facts related to two breeds OR click on the 'facts' button.
 
-(Optional): Markdown syntax to include an screenshot/image: ![alt text](image.jpg)
+![example of home page](screenshots/facts.png)
 
 ## Routes in this application
 - `/home` -> this is the home page that provides button links to the other pages
