@@ -76,7 +76,7 @@ The dog breed application provides information about a variety of dog breeds. Th
 - [x] Project is submitted as a Github repository
 - [x] Project includes a working Flask application that runs locally on a computer
 - [x] Project includes at least 1 test suite file with reasonable tests in it.
-- [ ] Includes a `requirements.txt` file containing all required modules to run program
+- [x] Includes a `requirements.txt` file containing all required modules to run program
 - [x] Includes a clear and readable README.md that follows this template
 - [x] Includes a sample .sqlite/.db file
 - [x] Includes a diagram of your database schema
