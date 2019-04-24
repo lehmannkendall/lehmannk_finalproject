@@ -6,18 +6,16 @@ Link to this repository: https://github.com/lehmannkendall/lehmannk_finalproject
 
 By: Kendall Lehmann (lehmannk)
 
-**I think I am mostly done with the project, but will continue to work on/review**
-
 ---
 
 ## Project Description
 
-The dog breed application provides information about a variety of dog breeds. The project scrapes data from https://www.petwave.com/Dogs/Breeds.aspx. This data is then put into a CSV and then put into two tables (Breed and Facts) in a database. In the Breed table there is information about the breed name and a description/overview of the breed (and the fact_id). In the Fact table there is information about the breed name, fun fact 1, fun fact 2, and fun fact 3. There are 4 flask routes in the dog breed application. The first route is a homepage that welcomes users and provides button links to other pages. The second route is information about the numbers of breeds available. The third route is information about the dog breed name and that dog breed's overview. The fourth route is information about the dog breed name and that dog breed's fun fact 1, fun fact 2, and fun fact 3.
+The dog breed application provides information about a variety of dog breeds. The project scrapes data from https://www.petwave.com/Dogs/Breeds.aspx. This data is then put into a CSV and then put into two tables (Breed and Facts) in a database. In the Breed table there is information about the breed name and a description/overview of the breed (and the fact_id). In the Fact table there is information about the breed name, fun fact 1, fun fact 2, and fun fact 3. There are 4 flask routes in the dog breed application. The first route is a homepage that welcomes users and provides button links to other pages. The second route is information about the numbers of breeds available (along with a button link to the homepage). The third route is information about the dog breed name and that dog breed's overview (along with a button link to the homepage). The fourth route is information about the dog breed name and that dog breed's fun fact 1, fun fact 2, and fun fact 3 (along with a button link to the homepage).
 
 ## How to run
 
 1. First, you should install all requirements with `pip install -r requirements.txt`
-2. Second, you should download SI507project_tools.py and SI507project_tests.py and the templates folder and the static folder and the advanced_expiry_caching.py file in the same directory.
+2. Second, you should download SI507project_tools.py and SI507project_tests.py and the templates folder and the static folder and the advanced_expiry_caching.py file in the same directory (under 'in this repository' within the readme there are optional files to download called 'example files' since these files should be created when the SI507project_tools.py file is run).
 3. Third, you should run `python SI507project_tools.py runserver` in the terminal window to run the application.
 4. Fourth, to test the code from SI507project_tools.py, run `python SI507project_tests.py` in the terminal window.
 
@@ -46,8 +44,8 @@ The dog breed application provides information about a variety of dog breeds. Th
 - `/funfacts` -> this route displays two random breeds and three fun facts that go along with each breed
 
 ## How to run tests
-1. First access the directory that you placed all the necessary files in (from 'how to run' section of readme)
-2. As mentioned in step 4 of 'how to use' section of readme, in order to test the code from SI507project_tools.py, run `python SI507project_tests.py` in the terminal window.
+1. First access the directory that you placed all the necessary files in (from 'how to run' section of readme).
+2. As mentioned in step 4 of 'how to use' section of readme, in order to test the code from SI507project_tools.py, run `python SI507project_tests.py` in the terminal window (in order for this to work correctly, you will need to run the SI507project_tools file first in the terminal window so it creates all necessary files - below these files are called the example files).
 
 ## In this repository:
 - Main Files
@@ -75,7 +73,7 @@ The dog breed application provides information about a variety of dog breeds. Th
 ### General
 - [x] Project is submitted as a Github repository
 - [x] Project includes a working Flask application that runs locally on a computer
-- [x] Project includes at least 1 test suite file with reasonable tests in it.
+- [x] Project includes at least 1 test suite file with reasonable tests in it
 - [x] Includes a `requirements.txt` file containing all required modules to run program
 - [x] Includes a clear and readable README.md that follows this template
 - [x] Includes a sample .sqlite/.db file
@@ -91,14 +89,14 @@ The dog breed application provides information about a variety of dog breeds. Th
 - [x] Information stored in the database is viewed or interacted with in some way
 
 ### Additional Components (at least 6 required)
-- [x] Use of a new module - PIL
+- [x] Use of a new module -- PIL & re
 - [ ] Use of a second new module
 - [ ] Object definitions using inheritance (indicate if this counts for 2 or 3 of the six requirements in a parenthetical)
 - [ ] A many-to-many relationship in your database structure
 - [ ] At least one form in your Flask application
 - [x] Templating in your Flask application
 - [x] Inclusion of JavaScript files in the application -- within the html templates
-- [x] Links in the views of Flask application page/s
+- [x] Links in the views of Flask application page/s -- links within buttons
 - [ ] Relevant use of `itertools` and/or `collections`
 - [x] Sourcing of data using web scraping
 - [ ] Sourcing of data using web REST API requests
@@ -106,5 +104,5 @@ The dog breed application provides information about a variety of dog breeds. Th
 - [x] Caching of data you continually retrieve from the internet in some way
 
 ### Submission
-- [ ] I included a link to my GitHub repository with the correct permissions on Canvas!
-- [ ] I included a summary of my project and how I thought it went **in my Canvas submission**!
+- [x] I included a link to my GitHub repository with the correct permissions on Canvas!
+- [x] I included a summary of my project and how I thought it went **in my Canvas submission**!

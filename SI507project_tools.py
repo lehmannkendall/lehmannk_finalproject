@@ -64,7 +64,7 @@ for item in cache_diction:
     for item in list_p:
         y = item
         if not y:
-            description_list.append("na")
+            description_list.append("Not Available")
         else:
             description_list.append(y.text)
     # print(description_list)

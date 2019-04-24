@@ -49,7 +49,8 @@ class PartFour(unittest.TestCase):
 
     def test_db_facts_exists(self):
         results = self.engine.dialect.has_table(self.engine, "facts")
-        self.assertTrue(results, "test to see if the table facts exists in the database")
+        self.assertTrue(results, "Test to see if the table facts exists in the database")
+
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)
