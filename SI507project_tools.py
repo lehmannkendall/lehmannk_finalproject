@@ -74,28 +74,16 @@ for item in cache_diction:
         z = item
         # print(item)
         fact1_list.append(z.replace("\n", "").replace("\r", "").replace("\t", "").strip())
-        # if not z:
-        #     fact1_list.append("na")
-        # else:
-        #     fact1_list.append(item)
 
     fact2 = soup.find("p", {"id": "htmlbody_3_centercontent_7_rptRelated_description_1"})
     for item in fact2:
         k = item
         fact2_list.append(k.replace("\n", "").replace("\r", "").replace("\t", "").strip())
-        # if not k:
-        #     fact2_list.append("na")
-        # else:
-        #     fact2_list.append(item)
 
     fact3 = soup.find("p", {"id": "htmlbody_3_centercontent_7_rptRelated_description_2"})
     for item in fact3:
         h = item
         fact3_list.append(h.replace("\n", "").replace("\r", "").replace("\t", "").strip())
-        # if not h:
-        #     fact3_list.append("na")
-        # else:
-        #     fact3_list.append(item)
 
 rows = zip(names_list, description_list, fact1_list, fact2_list, fact3_list)
 
