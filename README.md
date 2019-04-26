@@ -18,6 +18,7 @@ The dog breed application provides information about a variety of dog breeds. Th
 2. Second, you should download SI507project_tools.py and SI507project_tests.py and the templates folder and the static folder and the advanced_expiry_caching.py file in the same directory (under 'in this repository' within the readme there are optional files to download called 'example files' since these files should be created when the SI507project_tools.py file is run).
 3. Third, you should run `python SI507project_tools.py runserver` in the terminal window to run the application.
 4. Fourth, to test the code from SI507project_tools.py, run `python SI507project_tests.py` in the terminal window.
+
 Note: May take a little while to run.
 
 ## How to use
@@ -90,7 +91,7 @@ Note: May take a little while to run.
 - [x] Information stored in the database is viewed or interacted with in some way
 
 ### Additional Components (at least 6 required)
-- [x] Use of a new module -- PIL & re
+- [x] Use of a new module -- Pillow/PIL & re
 - [ ] Use of a second new module
 - [ ] Object definitions using inheritance (indicate if this counts for 2 or 3 of the six requirements in a parenthetical)
 - [ ] A many-to-many relationship in your database structure
